@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://dtl07j6g12e3a"]
+
+[ext_resource type="Script" path="res://CardContainer.gd" id="1_d3ht5"]
+[ext_resource type="PackedScene" uid="uid://bhc21edsg6hyx" path="res://Scene/Basic/cardA.tscn" id="2_4cj48"]
+[ext_resource type="PackedScene" uid="uid://b5kaqxf0bruvc" path="res://Scene/Basic/CardE.tscn" id="3_2kwdr"]
+[ext_resource type="PackedScene" uid="uid://beybqfn2j6g5y" path="res://Scene/Basic/CardI.tscn" id="4_uywb0"]
+[ext_resource type="PackedScene" uid="uid://mgwmlyfv3ug" path="res://Scene/Basic/CardO.tscn" id="5_r1snx"]
+[ext_resource type="PackedScene" uid="uid://nxj0ey504ops" path="res://Scene/Basic/CardU.tscn" id="6_5svfi"]
+[ext_resource type="PackedScene" uid="uid://bse20ockcx7tv" path="res://card_placement.tscn" id="7_fxvk8"]
+[ext_resource type="Texture2D" uid="uid://cse1jp4dwt3gp" path="res://Assets/paisaje provicional.jpg" id="8_obsre"]
+
+[node name="Board" type="Node"]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="CardHolder" type="HBoxContainer" parent="UI"]
+offset_left = 294.0
+offset_top = 353.0
+offset_right = 835.0
+offset_bottom = 523.0
+theme_override_constants/separation = -15
+script = ExtResource("1_d3ht5")
+
+[node name="CardA" parent="UI/CardHolder" instance=ExtResource("2_4cj48")]
+layout_mode = 2
+
+[node name="CardE" parent="UI/CardHolder" instance=ExtResource("3_2kwdr")]
+layout_mode = 2
+
+[node name="CardI" parent="UI/CardHolder" instance=ExtResource("4_uywb0")]
+layout_mode = 2
+
+[node name="CardO" parent="UI/CardHolder" instance=ExtResource("5_r1snx")]
+layout_mode = 2
+
+[node name="CardU" parent="UI/CardHolder" instance=ExtResource("6_5svfi")]
+layout_mode = 2
+
+[node name="CardPlacement" parent="UI" instance=ExtResource("7_fxvk8")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 317.0
+offset_top = 103.0
+offset_right = 888.0
+offset_bottom = 506.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="PaisajeProvicional" type="Sprite2D" parent="."]
+position = Vector2(593.749, 306.75)
+scale = Vector2(0.175886, 0.186112)
+texture = ExtResource("8_obsre")
+
+[node name="CardHolder" type="Node" parent="."]
+
+[connection signal="mouse_entered" from="UI/CardHolder" to="UI/CardHolder" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UI/CardHolder" to="UI/CardHolder" method="_on_mouse_exited"]

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://beybqfn2j6g5y"]
+
+[ext_resource type="PackedScene" uid="uid://b5kaqxf0bruvc" path="res://Scene/Basic/CardE.tscn" id="1_xafos"]
+[ext_resource type="Texture2D" uid="uid://b2u25ehl6o4ch" path="res://Assets/Cartas/Base/I.png" id="2_rq10x"]
+
+[node name="CardI" instance=ExtResource("1_xafos")]
+
+[node name="CardBacks" parent="." index="1"]
+texture = ExtResource("2_rq10x")
