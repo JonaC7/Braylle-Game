@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://nxj0ey504ops"]
 
 [ext_resource type="PackedScene" uid="uid://mgwmlyfv3ug" path="res://Scene/Basic/CardO.tscn" id="1_t71us"]
-[ext_resource type="Texture2D" uid="uid://cn0veyd6uo8jj" path="res://Assets/Cartas/Base/U.png" id="2_63o5u"]
+[ext_resource type="Texture2D" uid="uid://ba5cvvfknuj63" path="res://Assets/Cartas/Braille/UU.png" id="2_isty2"]
 
 [node name="CardU" instance=ExtResource("1_t71us")]
 
-[node name="CardBacks" parent="." index="1"]
-texture = ExtResource("2_63o5u")
+[node name="CardBacks" parent="." index="0"]
+texture = ExtResource("2_isty2")

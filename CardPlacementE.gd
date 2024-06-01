@@ -1,7 +1,7 @@
 extends Control
 
-@onready var card = preload("res://Scene/Basic/cardAOnBoard.tscn")
- 
+@onready var card = preload("res://Scene/Basic/cardAOnBoardE.tscn")
+
 
 func _on_mouse_entered():
 	Game.mouseOnePlacement = true
@@ -15,5 +15,5 @@ func placeCard():
 	var cardTemp = card.instantiate()
 	var projectResolution = ProjectSettings.get_setting("display/window/size/viewport_width")
 	var projectResolutionHeight = ProjectSettings.get_setting("display/window/size/viewport_height")
-	cardTemp.global_position = Vector2(projectResolution/2, projectResolutionHeight/2) - self.position
+	cardTemp.global_position = Vector2(350, 215) - self.position
 	add_child(cardTemp)

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://7ken7b0wsd1"]
+
+[ext_resource type="Texture2D" uid="uid://ba5cvvfknuj63" path="res://Assets/Cartas/Braille/UU.png" id="1_mdsi5"]
+
+[sub_resource type="GDScript" id="GDScript_vqk7p"]
+script/source = "extends Container
+
+var cardHeld = \"\"
+
+func _process(delta):
+	self.global_position = get_global_mouse_position()
+"
+
+[node name="CardA" type="Container"]
+custom_minimum_size = Vector2(105, 136)
+offset_right = 40.0
+offset_bottom = 40.0
+script = SubResource("GDScript_vqk7p")
+
+[node name="CardBacks" type="Sprite2D" parent="."]
+position = Vector2(2.27374e-13, 0)
+scale = Vector2(0.127711, 0.10813)
+texture = ExtResource("1_mdsi5")

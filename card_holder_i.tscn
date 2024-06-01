@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://cp0e35rfx0m7r"]
+
+[sub_resource type="GDScript" id="GDScript_gdccq"]
+script/source = "extends Control
+
+@onready var card = preload(\"res://Scene/Basic/cardAOnBoardI.tscn\")
+
+
+func _on_mouse_entered():
+	Game.mouseOnePlacement = true
+
+
+func _on_mouse_exited():
+	Game.mouseOnePlacement = false
+
+
+func placeCard():
+	var cardTemp = card.instantiate()
+	var projectResolution = ProjectSettings.get_setting(\"display/window/size/viewport_width\")
+	var projectResolutionHeight = ProjectSettings.get_setting(\"display/window/size/viewport_height\")
+	cardTemp.global_position = Vector2(450, 215) - self.position
+	add_child(cardTemp)
+"
+
+[node name="CardHolderI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -634.0
+offset_bottom = -358.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_gdccq")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

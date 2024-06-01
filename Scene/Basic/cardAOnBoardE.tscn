@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://8ou3sqmsu1v5"]
+[gd_scene load_steps=6 format=3 uid="uid://cwd48h4gavlhb"]
 
-[ext_resource type="Texture2D" uid="uid://dpcpnp337p1j6" path="res://Assets/Cartas/Base/A.png" id="2_m5fjl"]
+[ext_resource type="Texture2D" uid="uid://5rd704ii4011" path="res://Assets/Cartas/Braille/EE.png" id="1_d3si4"]
 
 [sub_resource type="Animation" id="Animation_a7jb0"]
 resource_name = "Deselect"
@@ -63,8 +63,8 @@ offset_bottom = 40.0
 
 [node name="CardBacks" type="Sprite2D" parent="."]
 position = Vector2(54, 68)
-scale = Vector2(0.127711, 0.10813)
-texture = ExtResource("2_m5fjl")
+scale = Vector2(0.2, 0.169)
+texture = ExtResource("1_d3si4")
 
 [node name="Anim" type="AnimationPlayer" parent="."]
 libraries = {

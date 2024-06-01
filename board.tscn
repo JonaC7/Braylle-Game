@@ -1,23 +1,36 @@
-[gd_scene load_steps=9 format=3 uid="uid://dtl07j6g12e3a"]
+[gd_scene load_steps=22 format=3 uid="uid://dtl07j6g12e3a"]
 
 [ext_resource type="Script" path="res://CardContainer.gd" id="1_d3ht5"]
 [ext_resource type="PackedScene" uid="uid://bhc21edsg6hyx" path="res://Scene/Basic/cardA.tscn" id="2_4cj48"]
 [ext_resource type="PackedScene" uid="uid://b5kaqxf0bruvc" path="res://Scene/Basic/CardE.tscn" id="3_2kwdr"]
+[ext_resource type="Script" path="res://Scene/Basic/CardE.gd" id="4_fuuts"]
 [ext_resource type="PackedScene" uid="uid://beybqfn2j6g5y" path="res://Scene/Basic/CardI.tscn" id="4_uywb0"]
 [ext_resource type="PackedScene" uid="uid://mgwmlyfv3ug" path="res://Scene/Basic/CardO.tscn" id="5_r1snx"]
 [ext_resource type="PackedScene" uid="uid://nxj0ey504ops" path="res://Scene/Basic/CardU.tscn" id="6_5svfi"]
+[ext_resource type="Script" path="res://Scene/Basic/CardI.gd" id="6_ckaqc"]
 [ext_resource type="PackedScene" uid="uid://bse20ockcx7tv" path="res://card_placement.tscn" id="7_fxvk8"]
-[ext_resource type="Texture2D" uid="uid://cse1jp4dwt3gp" path="res://Assets/paisaje provicional.jpg" id="8_obsre"]
+[ext_resource type="Script" path="res://Scene/Basic/CardO.gd" id="8_6pde3"]
+[ext_resource type="Script" path="res://Scene/Basic/CardU.gd" id="10_18uyb"]
+[ext_resource type="PackedScene" uid="uid://cc3esfjdxfy8x" path="res://card_placement_e.tscn" id="12_dpmcl"]
+[ext_resource type="Texture2D" uid="uid://c4obwvmrivjlj" path="res://Assets/_04a4ef45-724b-4e00-bf05-f785bee2212e.jpg" id="12_lyju6"]
+[ext_resource type="Texture2D" uid="uid://dpcpnp337p1j6" path="res://Assets/Cartas/Base/A.png" id="13_8pfgo"]
+[ext_resource type="PackedScene" uid="uid://yfvgxyl1icxs" path="res://card_placement_i.tscn" id="13_oth6g"]
+[ext_resource type="PackedScene" uid="uid://cycj8viq8hl4" path="res://card_placement_o.tscn" id="14_aiuoj"]
+[ext_resource type="Texture2D" uid="uid://byrwijldv0sep" path="res://Assets/Cartas/Base/E.png" id="14_aua1o"]
+[ext_resource type="Texture2D" uid="uid://brfh11i3ahvt6" path="res://Assets/Cartas/Base/O.png" id="15_tqjuo"]
+[ext_resource type="Texture2D" uid="uid://b2u25ehl6o4ch" path="res://Assets/Cartas/Base/I.png" id="16_8rni3"]
+[ext_resource type="Texture2D" uid="uid://cn0veyd6uo8jj" path="res://Assets/Cartas/Base/U.png" id="17_p6hit"]
+[ext_resource type="PackedScene" uid="uid://l2tcf5gpjjx7" path="res://card_placement_u.tscn" id="21_da03s"]
 
 [node name="Board" type="Node"]
 
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="CardHolder" type="HBoxContainer" parent="UI"]
-offset_left = 294.0
-offset_top = 353.0
-offset_right = 835.0
-offset_bottom = 523.0
+offset_left = 295.0
+offset_top = 491.0
+offset_right = 836.0
+offset_bottom = 661.0
 theme_override_constants/separation = -15
 script = ExtResource("1_d3ht5")
 
@@ -26,31 +39,84 @@ layout_mode = 2
 
 [node name="CardE" parent="UI/CardHolder" instance=ExtResource("3_2kwdr")]
 layout_mode = 2
+script = ExtResource("4_fuuts")
 
 [node name="CardI" parent="UI/CardHolder" instance=ExtResource("4_uywb0")]
 layout_mode = 2
+script = ExtResource("6_ckaqc")
 
 [node name="CardO" parent="UI/CardHolder" instance=ExtResource("5_r1snx")]
 layout_mode = 2
+script = ExtResource("8_6pde3")
 
 [node name="CardU" parent="UI/CardHolder" instance=ExtResource("6_5svfi")]
 layout_mode = 2
+script = ExtResource("10_18uyb")
 
-[node name="CardPlacement" parent="UI" instance=ExtResource("7_fxvk8")]
+[node name="CardPlacementA" parent="UI" instance=ExtResource("7_fxvk8")]
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 317.0
-offset_top = 103.0
-offset_right = 888.0
-offset_bottom = 506.0
+offset_left = 153.0
+offset_top = 172.0
+offset_right = 314.0
+offset_bottom = 389.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="PaisajeProvicional" type="Sprite2D" parent="."]
-position = Vector2(593.749, 306.75)
-scale = Vector2(0.175886, 0.186112)
-texture = ExtResource("8_obsre")
+[node name="CardPlacementE" parent="UI" instance=ExtResource("12_dpmcl")]
+offset_left = 329.0
+offset_top = 178.0
+offset_right = -670.0
+offset_bottom = -267.0
+
+[node name="CardPlacementI" parent="UI" instance=ExtResource("13_oth6g")]
+offset_left = 498.0
+offset_top = 180.0
+offset_right = -501.0
+offset_bottom = -261.0
+
+[node name="CardPlacementO" parent="UI" instance=ExtResource("14_aiuoj")]
+offset_left = 667.0
+offset_top = 180.0
+offset_right = -331.0
+offset_bottom = -266.0
+
+[node name="CardPlacementU" parent="UI" instance=ExtResource("21_da03s")]
+offset_left = 837.0
+offset_top = 181.0
+offset_right = -162.0
+offset_bottom = -266.0
+
+[node name="Fondo" type="Sprite2D" parent="."]
+position = Vector2(575.5, 326.5)
+scale = Vector2(1.12207, 0.635742)
+texture = ExtResource("12_lyju6")
+
+[node name="A" type="Sprite2D" parent="."]
+position = Vector2(233, 283)
+scale = Vector2(0.19, 0.169)
+texture = ExtResource("13_8pfgo")
+
+[node name="E" type="Sprite2D" parent="."]
+position = Vector2(405, 283)
+scale = Vector2(0.189, 0.169)
+texture = ExtResource("14_aua1o")
+
+[node name="O" type="Sprite2D" parent="."]
+position = Vector2(745, 283)
+scale = Vector2(0.189, 0.169)
+texture = ExtResource("15_tqjuo")
+
+[node name="I" type="Sprite2D" parent="."]
+position = Vector2(575, 283)
+scale = Vector2(0.189, 0.169)
+texture = ExtResource("16_8rni3")
+
+[node name="U" type="Sprite2D" parent="."]
+position = Vector2(915, 283)
+scale = Vector2(0.189, 0.169)
+texture = ExtResource("17_p6hit")
 
 [node name="CardHolder" type="Node" parent="."]
 

@@ -1,6 +1,6 @@
 extends Container
 
-@onready var card = preload("res://Scene/Basic/CardHolder.tscn")
+@onready var card = preload("res://Scene/Basic/CardHolderI.tscn")
 
 var startPosition
 var cardHighlighted = false
@@ -32,7 +32,7 @@ func _on_gui_input(event):
 					self.get_child(0).show()
 				else:
 					self.queue_free()
-					get_node("../../CardPlacement").placeCard()
+					get_node("../../CardPlacementI").placeCard()
 				for i in get_tree().get_root().get_node("Board/CardHolder").get_child_count():
 					get_tree().get_root().get_node("Board/CardHolder").get_child(i).queue_free()
 				Game.cardSelected = false

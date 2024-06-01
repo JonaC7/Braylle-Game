@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://bhc21edsg6hyx"]
+[gd_scene load_steps=6 format=3 uid="uid://cklb41r6hs5of"]
 
-[ext_resource type="Script" path="res://Scene/Basic/cardA.gd" id="1_gyvqr"]
-[ext_resource type="Texture2D" uid="uid://ioon6llmi4fk" path="res://Assets/Cartas/Braille/AA.png" id="2_mocgb"]
+[ext_resource type="Texture2D" uid="uid://bw376wohmhcth" path="res://Assets/Cartas/Braille/OO.png" id="1_rgeby"]
 
 [sub_resource type="Animation" id="Animation_a7jb0"]
 resource_name = "Deselect"
@@ -61,18 +60,13 @@ _data = {
 custom_minimum_size = Vector2(105, 136)
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_gyvqr")
 
 [node name="CardBacks" type="Sprite2D" parent="."]
 position = Vector2(54, 68)
-scale = Vector2(0.127711, 0.10813)
-texture = ExtResource("2_mocgb")
+scale = Vector2(0.2, 0.169)
+texture = ExtResource("1_rgeby")
 
 [node name="Anim" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_h2po1")
 }
-
-[connection signal="gui_input" from="." to="." method="_on_gui_input"]
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

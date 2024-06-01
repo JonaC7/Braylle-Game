@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bogrwb1cyb36r"]
 
-[ext_resource type="Texture2D" uid="uid://dpcpnp337p1j6" path="res://Assets/Cartas/Base/A.png" id="1_l1ql5"]
+[ext_resource type="Texture2D" uid="uid://ioon6llmi4fk" path="res://Assets/Cartas/Braille/AA.png" id="1_qjska"]
 
 [sub_resource type="GDScript" id="GDScript_vqk7p"]
 script/source = "extends Container
@@ -20,4 +20,4 @@ script = SubResource("GDScript_vqk7p")
 [node name="CardBacks" type="Sprite2D" parent="."]
 position = Vector2(2.27374e-13, 0)
 scale = Vector2(0.127711, 0.10813)
-texture = ExtResource("1_l1ql5")
+texture = ExtResource("1_qjska")
